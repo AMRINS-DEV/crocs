@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- ------------------ css ------------------ -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/x-icon" href="../icons/logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Sign In</title>
+</head>
+
+<body>
+    <main id="signin">
+        <div class="content">
+            <nav>
+                <div class="logo">
+                    <img src="../icons/logo.png" alt="">
+                    <span>
+                        <span class="logo-title">Edico</span>
+                        <span class="logo-dot">.</span>
+                    </span>
+                </div>
+                <div class="list">
+                    <ul>
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="./contact.html">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="title">
+                <h1>Create new account <span class="logo-dot">.</span></h1>
+            </div>
+            <div class="alreadyAMember">
+                <h3>Already A Member?</h3>
+                <a href="./signin.html">Log In</a>
+            </div>
+            <div class="form">
+                <form action="">
+                    <div class="fl-wrp">
+                        <div class="firsname-wrp outline">
+                            <div class="left">
+                                <label for="firstName">First name</label>
+                                <input type="text" id="firstName" name="firstname">
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                        </div>
+                        <div class="lastname-wrp outline">
+                            <div class="left">
+                                <label for="lastName">Last name</label>
+                                <input type="text" id="lastName" name="lastname">
+                            </div>
+                            <div class="right">
+                                <i class="fa-solid fa-id-card"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="email-wrp outline">
+                        <div class="left">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email">
+                        </div> 
+                        <div class="right">
+                            <i class="fa-solid fa-at"></i>
+                        </div>
+                    </div>
+                    <div class="password-wrp outline">
+                        <div class="left">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" name="password">
+                        </div> 
+                        <div class="right">
+                            <i class="fa-solid fa-eye" id="togglePassword"></i>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit">Create account</button>
+                    </div>
+                </form>
+            </div>
+        </div> 
+    </main>
+
+    <!-- javascript -->
+    <script>
+        const btn = document.querySelector('#togglePassword')
+        const inp = document.querySelector('#password')
+
+        let state = true
+        btn.addEventListener('click', function () {
+            if(state) {
+                inp.type = 'text'
+                state = false
+            } else {
+                inp.type = 'password'
+                state = true
+            }
+        })
+    </script>
+</body>
+
+</html>
